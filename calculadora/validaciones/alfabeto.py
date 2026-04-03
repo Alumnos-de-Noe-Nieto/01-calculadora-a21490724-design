@@ -30,4 +30,8 @@ def validar_simbolos(cadena: str) -> bool:
         >>> validar_simbolos("  XIV  ")
         True
     """
-    raise NotImplementedError()
+    cadena = cadena.strip()
+    if not cadena:
+        return False
+    return set(cadena).issubset(set("IVXLCDM"))
+
